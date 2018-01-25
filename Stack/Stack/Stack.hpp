@@ -11,26 +11,34 @@ public:
 	//initializes the index of 'top' to -1
 	Stack();
 
-	//add a paased value to the stack and
-	//increment the index of the 'top' element
+	//Add a paased value to the stack and increment the index of the 'top' element
+	//PRE  : a parameter needs to be an integer
+	//      Stack is not full	    
+	//POST : a value added to stack
 	void push(int);
 
-	//decrement the index of 'top element
+	//PRE   : Stack is not empty
+	//POST  : Decrement the index of 'top element
 	void pop();
 
-	//return the int on the top of the stack
+	//POST  : stack not changed
+	//RETURN: the int on the top of the stack
 	int top() const;
 
-	//return true if the stack is empty
+	//POST   : stack not changed
+	//RETURN : true if the stack is empty
 	bool empty() const;
 
-	//return true if the stack if full
+
+	//POST   : stack not chagned
+	//RETURN :return true if the stack if full
 	bool full() const;
 
 	//print the contents of the stack
 	void print();
 
-	//return maximum size
+	//POST   : stack not changed
+	//RETURN : return maximum size
 	int getMaxSize();
 
 private:
